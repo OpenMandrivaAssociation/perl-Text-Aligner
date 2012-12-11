@@ -1,20 +1,20 @@
 %define upstream_name    Text-Aligner
 %define upstream_version 0.07
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	3
 
-Summary:    No summary found
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	A single function to justify strings to various alignment styles
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl(Term::ANSIColor)
-BuildRequires: perl(Test::More)
-BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	perl-devel
+BuildRequires:	perl(Term::ANSIColor)
+BuildRequires:	perl(Test::More)
+BuildArch:	noarch
 
 %description
 Text::Aligner exports a single function, align(), which is used to justify
@@ -37,24 +37,26 @@ interpreted as an empty string without complaint.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
 %make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc Changes LICENSE META.yml README
 %{_mandir}/man3/*
-%perl_vendorlib/*
+%{perl_vendorlib}/*
 
+%changelog
+* Sat Apr 23 2011 Funda Wang <fwang@mandriva.org> 0.70.0-2mdv2011.0
++ Revision: 657850
+- rebuild for updated spec-helper
+
+* Sun Sep 19 2010 Shlomi Fish <shlomif@mandriva.org> 0.70.0-1mdv2011.0
++ Revision: 579811
+- import perl-Text-Aligner
 
