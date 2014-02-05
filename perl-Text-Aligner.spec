@@ -1,15 +1,15 @@
 %define upstream_name    Text-Aligner
-%define upstream_version 0.07
+%define upstream_version 0.09
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	A single function to justify strings to various alignment styles
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Text/Text-Aligner-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Term::ANSIColor)
@@ -59,4 +59,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 * Sun Sep 19 2010 Shlomi Fish <shlomif@mandriva.org> 0.70.0-1mdv2011.0
 + Revision: 579811
 - import perl-Text-Aligner
+
 
