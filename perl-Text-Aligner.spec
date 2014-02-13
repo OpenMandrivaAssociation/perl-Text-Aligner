@@ -1,5 +1,5 @@
 %define upstream_name    Text-Aligner
-%define upstream_version 0.09
+%define upstream_version 0.10
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -59,5 +59,6 @@ perl Makefile.PL INSTALLDIRS=vendor
 * Sun Sep 19 2010 Shlomi Fish <shlomif@mandriva.org> 0.70.0-1mdv2011.0
 + Revision: 579811
 - import perl-Text-Aligner
+
 
 

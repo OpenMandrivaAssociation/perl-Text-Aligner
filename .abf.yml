@@ -1,4 +1,5 @@
 removed_sources:
   Text-Aligner-0.07.tar.gz: 15d9a1c13f06c38ef20bbfd84928371886f9bd2a
-sources:
   Text-Aligner-0.09.tar.gz: f23c887ae61c77a6621b475f6f661cc27d71bd4c
+sources:
+  Text-Aligner-0.10.tar.gz: 57cb6458f52fbd333bc6f858103e66b3b28b66d4
