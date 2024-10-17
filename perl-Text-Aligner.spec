@@ -8,7 +8,7 @@ Release:	3
 Summary:	A single function to justify strings to various alignment styles
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Text/Text-Aligner-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
